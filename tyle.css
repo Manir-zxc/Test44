@@ -1,0 +1,163 @@
+body {
+	display: flex;
+    flex-flow: column;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+	margin: 0;
+    margin-top: 2rem;
+   
+
+	background-color: #140255;
+}
+#head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+	background-color: #140255;
+}
+
+.wrapper {
+    
+	perspective: 1000px;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 8rem;
+    margin-left: -1px;
+    
+    
+}
+.cube {
+	
+	width: 50px;
+	height: 50px;
+	transform-style: preserve-3d;
+	animation: animate 6s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+    margin-left: -170px;
+    
+   
+  
+
+}
+.side {
+  
+    font-size: 10px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	display: grid;
+	background-color: #8df901;
+	border-radius: 10px;
+	place-content: center;
+	border: 3px solid #fff;
+	box-shadow: 0 0 200px #f98d01, 0 0 20px #f98d01, 0 0 30px #01b4f9;
+}
+
+.front {
+	transform: translateZ(10px);
+}
+.back {
+	transform: rotateY(180deg) translateZ(10px);
+}
+.top {
+	transform: rotateX(90deg) translateZ(10px);
+}
+.bottom {
+	transform: rotateX(-90deg) translateZ(10px);
+}
+.left {
+	transform: rotateY(-90deg) translateZ(10px);
+}
+.right {
+	transform: rotateY(90deg) translateZ(10px);
+}
+
+@keyframes animate {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: rotateX(100deg) rotateY(360deg);
+	}
+    100% {
+		transform: rotateX(0deg) rotateY(360deg);
+	}
+ 
+}
+.h1{
+    
+    color: #fff;
+    margin-top: 2rem;
+    font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: #8df901;
+
+  text-shadow: 0 0 10px #ffffff38;
+  text-shadow: 2px 2px #8f006b;
+}
+
+.custom-form {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.75rem;
+    color: #9ca3af; /* gray-500 */
+  }
+  
+  .icon-svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .custom-input {
+    width: 100%;
+    padding: 0.625rem 0 0.625rem 2rem; /* py-2.5 and ps-6 */
+    font-size: 0.875rem;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #d1d5db; /* gray-300 */
+    color: white;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .custom-input:focus {
+    border-color: #2563eb; /* blue-600 */
+  }
+  
+  .custom-label {
+    position: absolute;
+    left: 2rem;
+    top: 0.75rem;
+    font-size: 0.875rem;
+    color: #9ca3af; /* gray-500 */
+    pointer-events: none;
+    transform: translateY(0);
+    transition: 0.3s ease all;
+  }
+  
+  /* Floating effect */
+  .custom-input:focus + .custom-label,
+  .custom-input:not(:placeholder-shown) + .custom-label {
+    transform: translateY(-1.5rem) scale(0.75);
+    color: #2563eb; /* blue-600 */
+  }
+  
